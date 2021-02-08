@@ -8,16 +8,16 @@ An organisation web app implemented with Visual Studio ASP.NET Web App (.NET Fra
 
 ## User Interface
 
-###Landingpage
+### Landingpage
 ![grafik](https://user-images.githubusercontent.com/78412795/107249810-fd458480-6a33-11eb-9560-0f887e2af45b.png)
 
-###Zum Kontakt (button):
+### Zum Kontakt (button):
 ![grafik](https://user-images.githubusercontent.com/78412795/107250055-14847200-6a34-11eb-8fbe-50e21e0ccb5d.png)
 
-###Nach Hernals (button):
+### Nach Hernals (button):
 ![grafik](https://user-images.githubusercontent.com/78412795/107250301-26661500-6a34-11eb-8daf-716df9cd3063.png)
 
-###Menue News:
+### Menue News:
 ![grafik](https://user-images.githubusercontent.com/78412795/107250470-34b43100-6a34-11eb-9dae-8da21c7a1458.png)
 
 ### After Login:

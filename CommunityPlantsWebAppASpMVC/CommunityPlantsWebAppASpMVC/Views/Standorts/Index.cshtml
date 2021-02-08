@@ -1,0 +1,75 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Standort>
+
+@{
+    ViewBag.Title = "Index";
+}
+@*Alle Views(->VBs) setzen hier den /Title für URL*@
+
+<h2>Übersicht</h2>
+<h4>Freiflächen</h4>
+<br />
+<p>
+    @Html.ActionLink("Create New ?", "Create")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SO_Bez)
+        </th>
+        <th>
+            Anzahl der Pflanzen
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SO_Bez)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Pflanzens.Count)
+            </td>
+
+
+            @*Alter Code : | kann man mit if nichtmehr so benutzen*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SO_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SO_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SO_ID }) |
+
+                @Html.ActionLink("zeige Pflanzen", "Index", "Pflanzens", new { ortsuche = item.SO_ID }, null)
+
+                @*um viewbag von partial einzufügen*@
+            </td>
+        </tr>
+    }
+
+</table>
+@*
+    <td>
+        @if (1 == 1)
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = item.SO_ID }) @Html.Raw(" | ")
+            @Html.ActionLink("Details", "Details", new { id = item.SO_ID }) @Html.Raw(" | ")
+            @Html.ActionLink("Delete", "Delete", new { id = item.SO_ID })
+        }
+        else
+        {
+        @Html.ActionLink("zeige Pflanzen", "Index", "Pflanzens", new { ortsuche = item.SO_ID }, null)
+        }
+    </td>
+
+    </tr>
+        }
+
+    </table>
+    @*
+        Um unter der Detail ansicht des Users seine Pflanzen aufzulisten
+
+    @Html.Partial("../Pflanzens/_Pflanzen", Model.Pflanzens)
+*@

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Community<b>PLANTS</b></h1>
+    <p class="lead">Willkommn auf unserer digitalen Pflanzenverwaltung!</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/blumen01.png" style="width:100% ">
+        <h2>Zum ersten Mal hier?</h2>
+        <p>
+            Dann schreiben Sie unserem Admin eine Mail. Er wird Ihnen Ihre Zugangsdaten schicken!
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Zum Kontakt", "Contact", "Home")</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <img src="~/tomaten01.png" style="width:100% ">
+        <h2>News</h2>
+        <p>Was gibte es Neues? Blumen, Früchtchen, Schädlinge oder Nützlinge!</p>
+        <br />
+        <p>Die <b>Nematoden</b> sind da!</p>
+
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+    </div>
+
+    <div class="col-md-4">
+        <img src="~/gang01.png" style="width:100% ">
+        <h2>Partnerprojekte</h2>
+        <p>Wir sind nicht die Einzigen die gerne im Kollektiv garteln?!</p>
+
+        <p><a class="btn btn-default" href="https://wohnpartner-wien.at/aktuelles/detail/wohnpartner-gartl-tour-mit-dem-bus-durch-gemeindebau-gaerten-1" target="_blank">Nach Hernals &raquo;</a></p>
+    </div>
+</div>

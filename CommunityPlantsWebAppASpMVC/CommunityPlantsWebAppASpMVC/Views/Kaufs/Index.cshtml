@@ -1,0 +1,61 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Kauf>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Übersicht</h2>
+<h4>Käufe</h4>
+<br/>
+@using (Ajax.BeginForm("ShopSearch", "Kaufs",
+           new AjaxOptions
+           {
+               InsertionMode = InsertionMode.Replace,
+               HttpMethod = "POST",
+   //OnFailure = "searchFailed",
+   //LoadingElementId = "ajax-loader",
+   UpdateTargetId = "searchresults"
+           }))
+
+{
+    <form>
+        <div class="form-group">
+            <label for="suchbez">Suche nach Shop:</label>
+            <input type="text" name="q" value="@ViewBag.suchstring" class="form-control" placeholder="Suche..." />
+        </div>
+        <input type="submit" value="Suche (ajax)" class="btn btn-default" />
+    </form>
+    <br />
+
+    @*<input type="text" name="q" value="@ViewBag.suchstring" />
+        <input type="submit" value="Sucheajax" />
+
+         < img id = "ajax-loader"
+        src = "@Url.Content("~/ Images / ajax - loader.gif")"
+        style = "display:none" /> *@
+}
+
+
+
+@*<h2>Übersicht</h2>
+<h4>Käufe</h4>
+<br />*@
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<br />
+@*<form>
+        <div class="form-group">
+            <label for="suchbez">Suche nach Shop:</label>
+            <input type="text" name="q" value="@ViewBag.suchstring" class="form-control" placeholder="Suche..." />
+        </div>
+        <input type="submit" value="Suche (ajax)" class="btn btn-default" />
+    </form>
+    <br />*@
+
+@Html.Partial("_kauflist", Model)
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}

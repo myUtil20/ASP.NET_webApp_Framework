@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Kauf>
+
+<div id="searchresults">
+@*<div id="indexliste">
+    <div class="pagedList" data-otf-target="#restaurantList">
+        @Html.PagedListPager(Model, Page => Url.Action("Index", new { page })),
+        PagedListRenderOptions.MinimalWithItemCountText)
+    </div>*@
+
+    <table class="table">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.K_Shop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.K_Datum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.K_Preis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.U_Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.K_Shop)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.K_Datum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.K_Preis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.U_Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.K_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.K_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.K_ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

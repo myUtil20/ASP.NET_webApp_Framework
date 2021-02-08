@@ -1,0 +1,52 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Schaedling
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Schaedling</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Bez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Bez)
+        </dd>
+
+        @*
+        <dt>
+            @Html.DisplayNameFor(model => model.S_P_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_P_ID)
+        </dd>
+        *@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Gegenmittel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Gegenmittel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Dat_letzteAnwendung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Dat_letzteAnwendung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.S_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

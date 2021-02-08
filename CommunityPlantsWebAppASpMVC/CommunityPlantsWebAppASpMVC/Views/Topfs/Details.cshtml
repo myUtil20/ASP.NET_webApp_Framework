@@ -1,0 +1,58 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Topf
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Topf</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Bez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Bez)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Breite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Breite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Tiefe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Tiefe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Hoehe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Hoehe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Standort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Standort.SO_Bez)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.T_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

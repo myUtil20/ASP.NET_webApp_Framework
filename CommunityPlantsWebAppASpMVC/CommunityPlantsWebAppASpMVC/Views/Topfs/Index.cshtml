@@ -1,0 +1,59 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Topf>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Übersicht</h2>
+<h4>Blumentöpfe</h4>
+<br />
+<p>
+    @Html.ActionLink("Create New ?", "Create")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.T_Bez)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_Breite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_Tiefe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_Hoehe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Standort.SO_Bez)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Bez)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Breite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Tiefe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_Hoehe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Standort.SO_Bez)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.T_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.T_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.T_ID })
+        </td>
+    </tr>
+}
+
+</table>

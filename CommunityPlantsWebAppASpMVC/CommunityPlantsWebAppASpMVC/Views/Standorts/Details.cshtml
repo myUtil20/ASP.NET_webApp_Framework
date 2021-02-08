@@ -1,0 +1,31 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Standort
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Standort</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Bez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Bez)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SO_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@*ViewBag Eintrag (.Property) {} = für c# damit true grau wird , deswegen auch ;*@
+@{ViewBag.Linksnichtzeigen = true; }
+
+@Html.Partial("../Pflanzens/_pflanzens", Model.Pflanzens)

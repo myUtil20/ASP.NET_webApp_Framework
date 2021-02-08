@@ -1,0 +1,42 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.U_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.U_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.U_PW)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.U_PW)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.U_Admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.U_Admin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.U_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

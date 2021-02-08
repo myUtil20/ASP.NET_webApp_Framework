@@ -1,0 +1,70 @@
+﻿
+@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Schaedling>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Übersicht</h2>
+<h4>Schädlinge</h4>
+<br />
+<p>
+    @Html.ActionLink("Create New ?", "Create")
+</p>
+<br />
+
+<form>
+    <div class="form-group">
+
+        <label for="suchbez">Suche nach Name:</label>
+        <input name="suchbez" id="suchbez" class="form-control" placeholder="Suche...">
+    </div>
+    <input type="submit" value="Suchen" class="btn btn-default" />
+</form>
+<br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.S_Bez)
+        </th>
+        @*
+        <th>
+            @Html.DisplayNameFor(model => model.S_P_ID)
+        </th>
+        *@
+        <th>
+            @Html.DisplayNameFor(model => model.S_Gegenmittel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_Dat_letzteAnwendung)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.S_Bez)
+    </td>
+    @*
+        <td>
+            @Html.DisplayFor(modelItem => item.S_P_ID)
+        </td>
+    *@
+    <td>
+        @Html.DisplayFor(modelItem => item.S_Gegenmittel)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.S_Dat_letzteAnwendung)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.S_ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.S_ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.S_ID })
+    </td>
+</tr>
+}
+
+</table>

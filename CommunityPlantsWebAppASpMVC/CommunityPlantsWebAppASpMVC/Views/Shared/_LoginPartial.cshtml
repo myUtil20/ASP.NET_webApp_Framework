@@ -1,0 +1,41 @@
+﻿@*
+    überprüft nur haben wir einen Login zustand? (Request.IsAuthenticated) if wenn ja else wenn nein
+*@
+@using System.Web.Security;
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @*spricht LogOff an*@
+        @Html.AntiForgeryToken()
+
+
+    <ul class="nav navbar-nav navbar-left">
+
+        <li>@Html.ActionLink("Pflanzen", "Index", "Pflanzens")</li>
+        <li>@Html.ActionLink("Blumentöpfe", "Index", "Topfs")</li>
+        <li>@Html.ActionLink("Freiflächen", "Index", "Standorts")</li>
+        <li>@Html.ActionLink("Schädlinge", "Index", "Schaedlings")</li>
+        <li>@Html.ActionLink("Käufe", "Index", "Kaufs")</li>
+        <li>@Html.ActionLink("Paten", "Index", "Users")</li>
+        <!--hier kann man weitere Menüpunkte einfügen-->
+
+     </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+            @*ankertag mach submit für form das logOff heißt*@
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Log In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

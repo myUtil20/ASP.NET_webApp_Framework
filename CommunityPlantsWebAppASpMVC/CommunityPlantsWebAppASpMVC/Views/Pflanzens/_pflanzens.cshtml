@@ -1,0 +1,94 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Pflanzen>
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Gepflanzt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Bluet_Von)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Bluet_Bis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Notiz)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kauf.K_Shop)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Schaedling.S_Bez)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Standort.SO_Bez)
+                </th>
+                @*
+                <th>
+                    @Html.DisplayNameFor(model => model.Steckbrief.ST_Name)
+                </th>
+                *@
+                <th>
+                    @Html.DisplayNameFor(model => model.Topf.T_Bez)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.U_Name)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_Gepflanzt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_Bluet_Von)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_Bluet_Bis)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.P_Notiz)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Kauf.K_Shop)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Schaedling.S_Bez)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Standort.SO_Bez)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Topf.T_Bez)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.U_Name)
+                    </td>
+                    <td>
+                        @if (ViewBag.Linksnichtzeigen == null)
+                        {
+                            @Html.ActionLink("Edit", "Edit", new { id = item.P_ID }) @Html.Raw(" | ")
+                            @Html.ActionLink("Details", "Details", new { id = item.P_ID }) @Html.Raw(" | ")
+                            @Html.ActionLink("Delete", "Delete", new { id = item.P_ID })
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Details", "Details", "Pflanzens", new { id = item.P_ID }, null)
+                        }
+
+                    </td>
+                </tr>
+            }
+
+        </table>

@@ -1,0 +1,56 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Schaedling
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Löschen</h2>
+
+<h3>Sind Sie sich sicher, dass Sie das Objekt löschen wollen?</h3>
+<div>
+    <h4>Schaedling</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Bez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Bez)
+        </dd>
+        @*
+        <dt>
+            @Html.DisplayNameFor(model => model.S_P_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_P_ID)
+        </dd>
+        *@
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Gegenmittel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Gegenmittel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Dat_letzteAnwendung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Dat_letzteAnwendung)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Löschen" class="btn btn-default" /> |
+            @Html.ActionLink("Zurück zur Liste", "Index")
+        </div>
+    }
+</div>

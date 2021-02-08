@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21cec50ebfbd4bc39597453614b17597" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Kauf" Width="1.5" PointX="7.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Pflanzen" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Schaedling" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Standort" Width="1.5" PointX="1" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Steckbrief" Width="1.5" PointX="3.125" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Topf" Width="1.5" PointX="1.125" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="7.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Kauf_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_Kauf" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_Schaedling" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_Standort" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_Steckbrief" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_Topf" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pflanzen_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Topf_Standort" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

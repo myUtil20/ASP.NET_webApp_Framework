@@ -1,0 +1,145 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Pflanzen
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editieren</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Pflanzen</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })   <!--Für allgemeine Fehler-->
+    @Html.HiddenFor(model => model.P_ID)                                <!--warum auskommentiert? -->
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.P_Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.P_Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Gepflanzt, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.P_Gepflanzt, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.P_Gepflanzt, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Kauf, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_Kauf", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_Kauf, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Topf, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_Topf", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_Topf, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @**@
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Standort, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_Standort", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_Standort, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Steckbrief, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_Steckbrief", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_Steckbrief, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Bluet_Von, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.P_Bluet_Von, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.P_Bluet_Von, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Bluet_Bis, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.P_Bluet_Bis, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.P_Bluet_Bis, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Notiz, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.P_Notiz, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.P_Notiz, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.P_Schaedling, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_Schaedling", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_Schaedling, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*
+            "P_U_Besitzer" ist statisch wenn man das auf null stellt übernimmt es tabellen überschrift von...
+            @Html.LabelFor(model => model.P_U_Besitzer, "P_U_Besitzer", htmlAttributes: new { @class = "control-label col-md-2" })
+        *@
+        @Html.LabelFor(model => model.P_U_Besitzer, null, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("P_U_Besitzer", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.P_U_Besitzer, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <!--renderbody dass sich im layout unten / an einer anderren stelle einfügen kann
+        jqueryvalidation validiert auf us und nicht international -> script von problemvalidierungs.txt-->
+
+    <script>
+        $.validator.methods.range = function (value, element, param) {
+
+            var globalizedValue = value.replace(",", ".");
+
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        }
+
+        $.validator.methods.number = function (value, element) {
+
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+        }
+    </script>
+
+    <!--jetzt kann dieser view mit nachkommastellen umgehen! Create + Edit
+        für prof App_start > BundleConfig > 2. = jqueryvalidation -->
+}

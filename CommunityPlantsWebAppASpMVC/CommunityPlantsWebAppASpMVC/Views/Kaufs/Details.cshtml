@@ -1,0 +1,53 @@
+﻿@model GemeinschaftsBalkonWebApp01.Models.Kauf
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kauf</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K_Shop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K_Shop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K_Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K_Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K_Preis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K_Preis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K_U_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.U_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.K_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

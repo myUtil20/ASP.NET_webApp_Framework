@@ -1,0 +1,139 @@
+﻿@model IEnumerable<GemeinschaftsBalkonWebApp01.Models.Pflanzen>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Übersicht</h2>              @*h2>Index @ViewBag.suchlehreranzeige</h2>*@
+<h4>Pflanzen</h4>
+<br />
+<p>
+    @Html.ActionLink("Create New ?", "Create")
+</p>
+
+<br />
+
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    Suche nach User:
+
+    @Html.DropDownList("suchuser", null, "Alle User", htmlAttributes: new { @class = "form-control" })
+
+</div>
+<div class="form-group">
+    <input type="submit" value="Suche" class="btn btn-default" />
+</div>
+}
+<br />
+
+@Html.Partial("_pflanzens", Model)
+
+
+
+
+
+
+
+
+@* alles von hier landet im partiellen view und wird gelöscht!
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Gepflanzt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Bluet_Von)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Bluet_Bis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.P_Notiz)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kauf.K_Shop)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Schaedling.S_Bez)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Standort.SO_Bez)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Steckbrief.ST_Name)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Topf.T_Bez)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.U_Name)
+                </th>
+                <th></th>
+        </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Gepflanzt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Bluet_Von)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Bluet_Bis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Notiz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kauf.K_Shop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schaedling.S_Bez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standort.SO_Bez)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Steckbrief.ST_Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Topf.T_Bez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.U_Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.P_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.P_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.P_ID })
+
+                @*
+                    @Html.ActionLink("Edit", "Edit", new { /* id = item.PrimatyKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PrimatyKey }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PrimatyKey })
+
+                    hätte man 2 PKs:
+                    @Html.ActionLink("Edit", "Edit", new { /* klasse = item.ST_K_Klasse, stunden = item.ST_Stunde */ }) |
+                    --||--
+                    --||--
+                        statt item > Model in Deteils.cshtml zu sehen zB eine einzelne StundenInstanz
+                *
+            </td>
+        </tr>
+    }
+    </table>
+*@

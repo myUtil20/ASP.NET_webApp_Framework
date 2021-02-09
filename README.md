@@ -48,3 +48,8 @@ zeige Pflanzen:
 ![grafik](https://user-images.githubusercontent.com/78412795/107251602-ce7bde00-6a34-11eb-8279-b61d0990ec61.png)
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251617-d3409200-6a34-11eb-8c58-47b0170ff136.png)
+
+ADO.NET Entity Data Model:
+![grafik](https://user-images.githubusercontent.com/78412795/107351241-a9d24580-6aca-11eb-9a21-02478bca5a72.png)
+
+

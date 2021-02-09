@@ -44,9 +44,7 @@ Details
 Freiflächen = Standort
 
 
-![grafik](https://user-images.githubusercontent.com/78412795/107251544-be63fe80-6a34-11eb-8919-094ee3b2c6a7.png)
-
-zeige Pflanzen:
+zeige Pflanzen
 ![grafik](https://user-images.githubusercontent.com/78412795/107251696-ee130680-6a34-11eb-8d45-241799437810.png)
 (schon nach Standort gefiltert, kann jetzt auch noch dazu nach User gefiltert werden)
 

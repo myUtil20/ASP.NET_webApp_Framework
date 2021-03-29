@@ -26,11 +26,9 @@ An organisation web app implemented with Visual Studio ASP.NET Web App (.NET Fra
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251098-63320c00-6a34-11eb-9bb0-b23fe836139c.png)
 
-Create New ?
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251298-7d6bea00-6a34-11eb-80a9-5aaaa7d1ad26.png)
 
-Delete
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251348-89f04280-6a34-11eb-81b8-19e6b9c4b53c.png)
 
@@ -41,18 +39,14 @@ Delete
 ![grafik](https://user-images.githubusercontent.com/78412795/107251448-a1c7c680-6a34-11eb-8f8c-b01b7addd589.png)
 
 
-Details
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107352380-0da93e00-6acc-11eb-865c-110e9d4011f2.png)
 
-Freiflächen = Standort
 
 
-zeige Pflanzen
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251696-ee130680-6a34-11eb-8d45-241799437810.png)
 
-(schon nach Standort gefiltert, kann jetzt auch noch dazu nach User gefiltert werden)
 
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107251584-c91e9380-6a34-11eb-9d8f-7921d72a81de.png)
@@ -64,7 +58,6 @@ zeige Pflanzen
 ![grafik](https://user-images.githubusercontent.com/78412795/107251617-d3409200-6a34-11eb-8c58-47b0170ff136.png)
 
 
-ADO.NET Entity Data Model:
 
 ![grafik](https://user-images.githubusercontent.com/78412795/107351744-41379880-6acb-11eb-945a-550b106cb42f.png)
 
